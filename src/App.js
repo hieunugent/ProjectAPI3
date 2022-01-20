@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 const App = ()=> {
-  const [chosenLevel, setChosenLevel] = useState('2');
+  const [chosenLevel, setChosenLevel] = useState(null);
   const [words, setWords] = useState(null);
   const [correctAnswers, setCorrectAnswers] = useState([]);
   const [clicked, setClicked] = useState([]);
@@ -49,7 +49,7 @@ const App = ()=> {
   console.log('correctAnswer',correctAnswers)
   console.log('clicked',clicked)
   return (
-    <div className="App">
+    <div className="app">
       {!chosenLevel && (
         <div className="level-selector">
           <h1>Word Association App</h1>
@@ -64,6 +64,13 @@ const App = ()=> {
             <option value="1">level 1</option>
             <option value="2">level 2</option>
             <option value="3">level 3</option>
+            <option value="4">level 4</option>
+            <option value="5">level 5</option>
+            <option value="6">level 6</option>
+            <option value="7">level 7</option>
+            <option value="8">level 8</option>
+            <option value="9">level 9</option>
+            <option value="10">level 10</option>
           </select>
         </div>
       )}
@@ -99,7 +106,7 @@ const App = ()=> {
               </div>
             ))}
           </div>
-          <button onClick={()=> setChosenLevel(null)}>Go Back</button>
+          <button onClick={() => setChosenLevel(null)}>Go Back</button>
         </div>
       )}
     </div>
