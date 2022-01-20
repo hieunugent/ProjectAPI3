@@ -12,12 +12,9 @@ const App = ()=> {
 
      const options = {
        method: "GET",
-       url: "https://twinword-word-association-quiz.p.rapidapi.com/type1/",
+       url: "http://localhost:8000/words",
        params: { level: chosenLevel, area: "sat" },
-       headers: {
-         "x-rapidapi-host": "twinword-word-association-quiz.p.rapidapi.com",
-         "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY,
-       },
+    
      };
 
      axios
